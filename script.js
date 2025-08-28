@@ -17,7 +17,24 @@ for(const hearClick of hearClicks){
 }
 
 // copy  button count
+const copyBtns =document.getElementsByClassName('copy-btn')
+for(const copyBtn of copyBtns ){
+    copyBtn.addEventListener('click',function(){
+        
 
+    
+        let copyCount =getElement('copy-count').innerText
+        copyCount=Number(copyCount)+1
+      getElement('copy-count').innerText=copyCount
+
+      const copyalert = copyBtn.parentNode.children[3].innerText
+
+        navigator.clipboard.writeText(copyalert);
+
+      alert('নম্বর কপি হয়েছে  '+ copyalert)
+
+    })
+}
 
 //   call btn
 const callBtns = document.getElementsByClassName('call-btn')
