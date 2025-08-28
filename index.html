@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Emergency-Hotline</title>
+
 
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
@@ -33,15 +34,15 @@
             <!-- header button -->
             <div class="flex items-center md:gap-5  gap-3 ">
                 <div class="flex items-center justify-center gap-2 bg-[#ecfff0] py-2 px-5 rounded-[40px] ">
-                    <span class="font-bold">0</span>
+                    <span  id="heart-coin" class="font-bold">0</span>
                     <img class="w-5 md:w-8" src="./img/heart.png" alt="">
                 </div>
 
                 <div class="flex items-center justify-center gap-2 bg-[#ecfff0] rounded-[50px]  py-3 px-5">
-                    <span class="font-bold">100</span>
+                    <span id="count-coin" class="font-bold">100</span>
                     <img class="md:w-8 w-5" src="./img/coin.png" alt="">
                 </div>
-                <p class="bg-[#00a63e] py-3 px-5 md:py-3 md:px-8 text-white font-medium rounded-[50px]"><span>2</span>
+                <p class="bg-[#00a63e] py-3 px-5 md:py-3 md:px-8 text-white font-medium rounded-[50px]"><span id="copy-count">0</span>
                     Copy</p>
             </div>
 
@@ -64,11 +65,11 @@
                 <div class=" md:w-9/12">
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                         <!-- 1 -->
-                        <div class="  p-8 bg-white rounded-[12px] shadow-[0_2px_3px_0_rgba(0,0,0,0.15)]">
+                        <div class="  p-5 bg-white rounded-[12px] shadow-[0_2px_3px_0_rgba(0,0,0,0.15)]">
                             <div class="flex justify-between items-center">
                                 <img class="w-[60px] mb-4 rounded-2xl p-4 bg-[#ffe3e2]  " src="./img/emergency.png"
                                     alt="">
-                                <i class="fa-regular fa-heart text-[#707070]"></i>
+                                <i class="fa-regular fa-heart text-[#707070] cursor-pointer hear-click copy-btn"></i>
                             </div>
                             <h2 class="font-bold text-2xl">জাতীয় জরুরি সেবা</h2>
                             <p class="font-[18] text-[#707070] mb-6">National Emergency</p>
@@ -77,7 +78,7 @@
                             <p class="font-[18] text-[#707070]   mb-6">সার্বজনীন</p>
                             <button class=" btn text-[#707070] w-[45%] "><i class="fa-regular fa-copy"></i>Copy</button>
 
-                            <button class="btn  bg-[#00a63e] text-white w-[45%] "><i
+                            <button class="btn  bg-[#00a63e] text-white w-[45%] call-btn"><i
                                     class="fa-solid fa-phone"></i>Call</button>
 
                         </div>
@@ -85,16 +86,16 @@
                         <div class=" p-8 bg-white rounded-[12px] shadow-[0_2px_3px_0_rgba(0,0,0,0.15)] ">
                             <div class="flex justify-between items-center">
                                 <img class="w-[60px] mb-4 rounded-2xl p-4 bg-[#ffe3e2]  " src="./img/police.png" alt="">
-                                <i class="fa-regular fa-heart text-[#707070]"></i>
+                                <i class="fa-regular fa-heart text-[#707070] cursor-pointer hear-click"></i>
                             </div>
                             <h2 class="font-bold text-2xl">পুলিশ</h2>
                             <p class="font-[18] text-[#707070] mb-6">Police</p>
 
                             <h2 class="font-bold  text-3xl">999</h2>
                             <p class="font-[18] text-[#707070]  mb-6">পুলিশ</p>
-                            <button class="btn text-[#707070]  w-[45%]"><i class="fa-regular fa-copy"></i>Copy</button>
+                            <button class="btn text-[#707070]  w-[45%]"><i class="fa-regular fa-copy copy-btn"></i>Copy</button>
 
-                            <button class="btn  bg-[#00a63e] text-white w-[45%]"><i
+                            <button class="btn  bg-[#00a63e] text-white w-[45%] call-btn"><i
                                     class="fa-solid fa-phone"></i>Call</button>
 
                         </div>
@@ -103,52 +104,52 @@
                             <div class="flex justify-between items-center">
                                 <img class="w-[60px] mb-4 rounded-2xl p-4 bg-[#ffe3e2]  " src="./img/fire-service.png"
                                     alt="">
-                                <i class="fa-regular fa-heart text-[#707070]"></i>
+                                <i class="fa-regular fa-heart text-[#707070] cursor-pointer hear-click"></i>
                             </div>
                             <h2 class="font-bold text-2xl">ফায়ার সার্ভিস</h2>
                             <p class="font-[18] text-[#707070] mb-6">Fire Service</p>
 
                             <h2 class="font-bold  text-3xl">999</h2>
                             <p class="font-[18] text-[#707070]  mb-6">ফায়ার</p>
-                            <button class="btn text-[#707070]  w-[45%]"><i class="fa-regular fa-copy"></i>Copy</button>
+                            <button class="btn text-[#707070]  w-[45%]"><i class="fa-regular fa-copy copy-btn"></i>Copy</button>
 
-                            <button class="btn  bg-[#00a63e] text-white w-[45%]"><i
+                            <button class="btn  bg-[#00a63e] text-white w-[45%] call-btn"><i
                                     class="fa-solid fa-phone"></i>Call</button>
 
                         </div>
                         <!-- 4 -->
                         <div class=" p-8 bg-white rounded-[12px] shadow-[0_2px_3px_0_rgba(0,0,0,0.15)]">
                             <div class="flex justify-between items-center">
-                                <img class="w-[60px] mb-4 rounded-2xl p-4 bg-[#ffe3e2]  " src="./img/emergency.png"
+                                <img class="w-[60px] mb-4 rounded-2xl p-4 bg-[#ffe3e2]  " src="./img/ambulance.png"
                                     alt="">
-                                <i class="fa-regular fa-heart text-[#707070]"></i>
+                                <i class="fa-regular fa-heart text-[#707070] cursor-pointer hear-click"></i>
                             </div>
                             <h2 class="font-bold text-2xl">অ্যাম্বুলেন্স</h2>
-                            <p class="font-[18] text-[#707070] mb-6">Ambulance</p>
+                            <p class="font-[18] text-[#707070] mb-6 ">Ambulance</p>
 
                             <h2 class="font-bold  text-3xl">1994-999999</h2>
                             <p class="font-[18] text-[#707070]  mb-6">স্বাস্থ্য</p>
-                            <button class="btn text-[#707070]  w-[45%]"><i class="fa-regular fa-copy"></i>Copy</button>
+                            <button class="btn text-[#707070]  w-[45%]"><i class="fa-regular fa-copy copy-btn"></i>Copy</button>
 
-                            <button class="btn  bg-[#00a63e] text-white w-[45%]"><i
+                            <button class="btn  bg-[#00a63e] text-white w-[45%] call-btn"><i
                                     class="fa-solid fa-phone"></i>Call</button>
 
                         </div>
                         <!-- 5 -->
-                        <div class=" p-8 bg-white rounded-[12px] shadow-[0_2px_3px_0_rgba(0,0,0,0.15)]">
+                        <div class=" p-5 bg-white rounded-[12px] shadow-[0_2px_3px_0_rgba(0,0,0,0.15)]">
                             <div class="flex justify-between items-center">
                                 <img class="w-[60px] mb-4 rounded-2xl p-4 bg-[#ffe3e2]  " src="./img/emergency.png"
                                     alt="">
-                                <i class="fa-regular fa-heart text-[#707070]"></i>
+                                <i class="fa-regular fa-heart text-[#707070] cursor-pointer hear-click"></i>
                             </div>
                             <h2 class="font-bold text-2xl">নারী ও শিশু সহায়তা</h2>
                             <p class="font-[18] text-[#707070] mb-6">Women & Child Helpline</p>
 
                             <h2 class="font-bold  text-3xl">109</h2>
                             <p class="font-[18] text-[#707070]  mb-6">সহায়তা</p>
-                            <button class="btn text-[#707070]  w-[45%]"><i class="fa-regular fa-copy"></i>Copy</button>
+                            <button class="btn text-[#707070]  w-[45%]"><i class="fa-regular fa-copy copy-btn"></i>Copy</button>
 
-                            <button class="btn  bg-[#00a63e] text-white w-[45%]"><i
+                            <button class="btn  bg-[#00a63e] text-white w-[45%] call-btn"><i
                                     class="fa-solid fa-phone"></i>Call</button>
 
                         </div>
@@ -157,16 +158,16 @@
                             <div class="flex justify-between items-center">
                                 <img class="w-[60px] mb-4 rounded-2xl p-4 bg-[#ffe3e2]  " src="./img/emergency.png"
                                     alt="">
-                                <i class="fa-regular fa-heart text-[#707070]"></i>
+                                <i class="fa-regular fa-heart text-[#707070] cursor-pointer hear-click"></i>
                             </div>
                             <h2 class="font-bold text-2xl">দুদক</h2>
                             <p class="font-[18] text-[#707070] mb-6">Anti-Corruption</p>
 
                             <h2 class="font-bold  text-3xl">106</h2>
                             <p class="font-[18] text-[#707070]  mb-6">সরকারি</p>
-                            <button class="btn text-[#707070]  w-[45%]"><i class="fa-regular fa-copy"></i>Copy</button>
+                            <button class="btn text-[#707070]  w-[45%]"><i class="fa-regular fa-copy copy-btn"></i>Copy</button>
 
-                            <button class="btn  bg-[#00a63e] text-white w-[45%]"><i
+                            <button class="btn  bg-[#00a63e] text-white w-[45%] call-btn"><i
                                     class="fa-solid fa-phone"></i>Call</button>
 
                         </div>
@@ -175,75 +176,84 @@
                             <div class="flex justify-between items-center">
                                 <img class="w-[60px] mb-4 rounded-2xl p-4 bg-[#ffe3e2]  " src="./img/emergency.png"
                                     alt="">
-                                <i class="fa-regular fa-heart text-[#707070]"></i>
+                                <i class="fa-regular fa-heart text-[#707070] cursor-pointer hear-click"></i>
                             </div>
                             <h2 class="font-bold text-2xl">বিদ্যুৎ বিভ্রাট</h2>
                             <p class="font-[18] text-[#707070] mb-6">Electricity Outage</p>
 
                             <h2 class="font-bold  text-3xl">16216</h2>
                             <p class="font-[18] text-[#707070]  mb-6">বিদ্যুৎ</p>
-                            <button class="btn text-[#707070]  w-[45%]"><i class="fa-regular fa-copy"></i>Copy</button>
+                            <button class="btn text-[#707070]  w-[45%]"><i class="fa-regular fa-copy copy-btn"></i>Copy</button>
 
-                            <button class="btn  bg-[#00a63e] text-white w-[45%]"><i
+                            <button class="btn  bg-[#00a63e] text-white w-[45%] call-btn"><i
                                     class="fa-solid fa-phone"></i>Call</button>
 
                         </div>
                         <!-- 8 -->
                         <div class=" p-8 bg-white rounded-[12px] shadow-[0_2px_3px_0_rgba(0,0,0,0.15)]">
                             <div class="flex justify-between items-center">
-                                <img class="w-[60px] mb-4 rounded-2xl p-4 bg-[#ffe3e2]  " src="./img/emergency.png"
-                                    alt="">
-                                <i class="fa-regular fa-heart text-[#707070]"></i>
+                                <img class="w-[60px] mb-4 rounded-2xl p-4 bg-[#ffe3e2]  " src="./img/brac.png" alt="">
+                                <i class="fa-regular fa-heart text-[#707070] cursor-pointer hear-click"></i>
                             </div>
                             <h2 class="font-bold text-2xl">ব্র্যাক</h2>
                             <p class="font-[18] text-[#707070] mb-6">Brac</p>
 
                             <h2 class="font-bold  text-3xl">16445</h2>
                             <p class="font-[18] text-[#707070]  mb-6">এনজিও</p>
-                            <button class="btn text-[#707070]  w-[45%]"><i class="fa-regular fa-copy"></i>Copy</button>
+                            <button class="btn text-[#707070]  w-[45%]"><i class="fa-regular fa-copy copy-btn"></i>Copy</button>
 
-                            <button class="btn  bg-[#00a63e] text-white w-[45%]"><i
+                            <button class="btn  bg-[#00a63e] text-white w-[45%] call-btn"><i
                                     class="fa-solid fa-phone"></i>Call</button>
 
                         </div>
                         <!-- 9 -->
                         <div class=" p-8 bg-white rounded-[12px] shadow-[0_2px_3px_0_rgba(0,0,0,0.15)]">
                             <div class="flex justify-between items-center">
-                                <img class="w-[60px] mb-4 rounded-2xl p-4 bg-[#ffe3e2]  " src="./img/emergency.png"
-                                    alt="">
-                                <i class="fa-regular fa-heart text-[#707070]"></i>
+                                <img class="w-[60px] mb-4 rounded-2xl p-4 bg-[#ffe3e2]  "
+                                    src="./img/Bangladesh-Railway.png" alt="">
+                                <i class="fa-regular fa-heart text-[#707070] cursor-pointer hear-click"></i>
                             </div>
                             <h2 class="font-bold text-2xl">বাংলাদেশ রেলওয়ে</h2>
                             <p class="font-[18] text-[#707070] mb-6">Bangladesh Railway</p>
 
                             <h2 class="font-bold  text-3xl">163</h2>
                             <p class="font-[18] text-[#707070]  mb-6">পরিবহন</p>
-                            <button class="btn text-[#707070]  w-[45%]"><i class="fa-regular fa-copy"></i>Copy</button>
+                            <button class="btn text-[#707070]  w-[45%]"><i class="fa-regular fa-copy copy-btn"></i>Copy</button>
 
-                            <button class="btn  bg-[#00a63e] text-white w-[45%]"><i
+                            <button class="btn  bg-[#00a63e] text-white w-[45%] call-btn"><i
                                     class="fa-solid fa-phone"></i>Call</button>
 
                         </div>
                     </div>
                 </div>
                 <!-- call history -->
-                <div class=" md:w-3/12 bg-white p-6">
+                <div id="call-history" class=" md:w-3/12 bg-white p-4">
                     <div class="flex items-center justify-between">
                         <div class="flex items-center gap-2"><i class="fa-regular fa-clock"></i>
-                        <p class="text-[20px] font-medium">Call History</p></div>
-                        <button class="btn bg-[#00a63e] rounded-3xl text-white">Clear</button>
-                    </div>
-                    <div class="flex items-center justify-between bg-[#f5fff6] mb-5">
-                        <div>
-                            <p>জাতীয় জরুরি সেবা</p> 
-                            <p>999</p>
+                            <p class="text-[20px] font-medium">Call History</p>
                         </div>
-                           new Date().toLocaleTimeString()
+                        <button id="clear-btn" class="btn bg-[#00a63e] rounded-3xl text-white">Clear</button>
                     </div>
+                   <div id='append-div'>
+
+                   </div>
                 </div>
             </div>
         </section>
     </main>
+
+    <script src="./script.js"></script>
+    <script>
+
+
+        
+
+        
+
+         
+
+
+    </script>
 </body>
 
 </html>
